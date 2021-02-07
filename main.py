@@ -70,12 +70,12 @@ def parse_address_page(address, address_url):
     try:
         sold = extract_image_text(images[0])
     except:
-        sold = 'Sold date not found'
+        sold = 'No value found'
 
     try:
         price = extract_image_text(images[1])
     except:
-        price = 'Sold price not found'
+        price = 'No value found'
 
     write_data(determine_url(address_url), address, sold, price)
 
